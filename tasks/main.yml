@@ -1,0 +1,16 @@
+---
+- name: Install QEMU KVM EV CentOS release
+  yum: >
+    enablerepo=extras
+    name=centos-release-qemu-ev
+    state=present
+  when: ansible_distribution == 'CentOS'
+  tags: packages
+
+- name: Install QEMU KVM
+  yum: name={{item}} state=installed
+  with_items:
+    - qemu-kvm-{{rhev_suffix}}
+    - qemu-kvm-tools-{{rhev_suffix}}
+    - qemu-img-{{rhev_suffix}}
+  tags: packages

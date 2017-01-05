@@ -1,0 +1,2 @@
+---
+rhev_suffix: "{% if ansible_distribution == 'RedHat' %}rh{% endif %}ev"

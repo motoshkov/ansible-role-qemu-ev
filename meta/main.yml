@@ -1,0 +1,14 @@
+---
+galaxy_info:
+  author: thepax
+  description: RHEL/CentOS - QEMU KVM Enterprise Virtualization
+  license: GPL
+  min_ansible_version: 1.9
+  platforms:
+    - name: EL
+      versions:
+        - 7
+  galaxy_tags:
+    - qemu
+    - qemu-ev
+    - system
